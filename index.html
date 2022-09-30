@@ -1,0 +1,173 @@
+<!doctype html>
+<html>
+<head>
+<!-- you can use your own animation library and css3 classes -->
+<link rel="stylesheet" href="assets/lib/effect.css"> 
+<!-- ipanorama styles -->
+<link rel="stylesheet" href="/socoda-vr/builder/assets/lib/ipanorama.css">
+<link rel="stylesheet" href="/socoda-vr/builder/assets//lib/ipanorama.theme.default.css">
+<link rel="stylesheet" href="/socoda-vr/builder/assets//lib/ipanorama.theme.modern.css">
+<link rel="stylesheet" href="/socoda-vr/builder/assets/lib/ipanorama.theme.dark.css">
+<!-- /end ipanorama styles -->
+<!-- main style -->
+<style>
+#mypanorama {
+  position:absolute;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+}
+</style>
+<!-- /end main style -->
+</head>
+<body>
+
+<div id="mypanorama"></div>
+
+<script src="/socoda-vr/builder/assets/js/lib/jquery.min.js"></script>
+<script src="/socoda-vr/builder/assets/js/lib/three.min.js"></script>
+<script src="/socoda-vr/builder/assets/lib/jquery.ipanorama.min.js"></script>
+<script type="text/javascript">
+$("#mypanorama").ipanorama({
+  "theme": "ipnrm-theme-modern",
+  "autoLoad": true,
+  "autoRotate": false,
+  "autoRotateSpeed": 0.001,
+  "autoRotateInactivityDelay": 3000,
+  "mouseWheelPreventDefault": true,
+  "mouseWheelRotate": false,
+  "mouseWheelRotateCoef": 0.2,
+  "mouseWheelZoom": false,
+  "mouseWheelZoomCoef": 0.05,
+  "hoverGrab": false,
+  "hoverGrabYawCoef": 20,
+  "hoverGrabPitchCoef": 20,
+  "grab": true,
+  "grabCoef": 0.1,
+  "pinchZoom": true,
+  "pinchZoomCoef": 0.1,
+  "showControlsOnHover": false,
+  "showSceneThumbsCtrl": false,
+  "showSceneMenuCtrl": false,
+  "showSceneNextPrevCtrl": true,
+  "showShareCtrl": false,
+  "showZoomCtrl": true,
+  "showFullscreenCtrl": true,
+  "showAutoRotateCtrl": false,
+  "sceneThumbsVertical": true,
+  "sceneThumbsStatic": false,
+  "title": true,
+  "compass": true,
+  "keyboardNav": false,
+  "keyboardZoom": false,
+  "sceneNextPrevLoop": false,
+  "popover": true,
+  "popoverPlacement": "top",
+  "hotSpotBelowPopover": true,
+  "popoverShowTrigger": "hover",
+  "popoverHideTrigger": "leave",
+  "mobile": false,
+  "sceneId": "scene1",
+  "sceneFadeDuration": 3000,
+  "sceneBackgroundLoad": false,
+  "scenes": {
+    "scene1": {
+      "type": "sphere",
+      "cubeTextureCount": "single",
+      "sphereWidthSegments": 100,
+      "sphereHeightSegments": 40,
+      "image": "upload/foto-bano-bien.jpg",
+      "zoom": 100,
+      "saveCamera": true,
+      "title": null,
+      "titleHtml": false,
+      "titleSelector": null,
+      "hotSpots": [
+        {
+          "title": "Lavamanos",
+          "yaw": 85.91410690683718,
+          "pitch": -22.328333867342725,
+          "imageUrl": "",
+          "imageWidth": null,
+          "imageHeight": null,
+          "link": null,
+          "linkNewWindow": false,
+          "popoverHtml": true,
+          "popoverContent": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas luctus risus magna, vel tempus nisi imperdiet ac. Integer semper vel dolor et bibendum. In pulvinar sodales augue, sit amet lobortis augue euismod a",
+          "popoverSelector": null,
+          "popoverLazyload": true,
+          "popoverShow": false,
+          "popoverWidth": 300
+        },
+        {
+          "title": "Espejo",
+          "yaw": 88.82750659681699,
+          "pitch": 28.878765643404545,
+          "imageUrl": "",
+          "imageWidth": null,
+          "imageHeight": null,
+          "link": null,
+          "linkNewWindow": false,
+          "popoverHtml": true,
+          "popoverContent": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas luctus risus magna, vel tempus nisi imperdiet ac. Integer semper vel dolor et bibendum. In pulvinar sodales augue, sit amet lobortis augue euismod a",
+          "popoverSelector": null,
+          "popoverLazyload": true,
+          "popoverShow": false,
+          "popoverWidth": 300
+        },
+        {
+          "title": "Bañera",
+          "yaw": 348.638931958814,
+          "pitch": -22.61516650189906,
+          "imageUrl": "",
+          "imageWidth": null,
+          "imageHeight": null,
+          "link": null,
+          "linkNewWindow": false,
+          "popoverHtml": true,
+          "popoverContent": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas luctus risus magna, vel tempus nisi imperdiet ac. Integer semper vel dolor et bibendum. In pulvinar sodales augue, sit amet lobortis augue euismod a",
+          "popoverSelector": null,
+          "popoverLazyload": true,
+          "popoverShow": false,
+          "popoverWidth": 300
+        },
+        {
+          "title": "Sanitario",
+          "yaw": 267.95061570802585,
+          "pitch": -32.5366789527047,
+          "imageUrl": "",
+          "imageWidth": null,
+          "imageHeight": null,
+          "link": null,
+          "linkNewWindow": false,
+          "popoverHtml": true,
+          "popoverContent": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas luctus risus magna, vel tempus nisi imperdiet ac. Integer semper vel dolor et bibendum. In pulvinar sodales augue, sit amet lobortis augue euismod a",
+          "popoverSelector": null,
+          "popoverLazyload": true,
+          "popoverShow": false,
+          "popoverWidth": 300
+        },
+        {
+          "title": "Toallero",
+          "yaw": 33.99244616273759,
+          "pitch": 26.498408925977383,
+          "imageUrl": "",
+          "imageWidth": null,
+          "imageHeight": null,
+          "link": null,
+          "linkNewWindow": false,
+          "popoverHtml": true,
+          "popoverContent": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas luctus risus magna, vel tempus nisi imperdiet ac. Integer semper vel dolor et bibendum. In pulvinar sodales augue, sit amet lobortis augue euismod a",
+          "popoverSelector": null,
+          "popoverLazyload": true,
+          "popoverShow": false,
+          "popoverWidth": 300
+        }
+      ]
+    }
+  }
+});
+</script>
+</body>
+</html>

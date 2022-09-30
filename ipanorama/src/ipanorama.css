@@ -1,0 +1,317 @@
+/*!
+  iPanorama 360 - jQuery Virtual Tour
+  @name ipanorama.css
+  @description a jQuery plugin for creating a panorama viewer and virtual tours
+  @version 1.3.0
+  @author Max Lawrence 
+  @site http://www.avirtum.com
+  @copyright (c) 2016 Max Lawrence (http://www.avirtum.com)
+*/
+.reset-styles div,
+.reset-styles span,
+.reset-styles object,
+.reset-styles iframe,
+.reset-styles embed,
+.reset-styles h1,
+.reset-styles h2,
+.reset-styles h3,
+.reset-styles h4,
+.reset-styles h5,
+.reset-styles h6,
+.reset-styles p,
+.reset-styles blockquote,
+.reset-styles pre,
+.reset-styles abbr,
+.reset-styles address,
+.reset-styles cite,
+.reset-styles code,
+.reset-styles del,
+.reset-styles dfn,
+.reset-styles em,
+.reset-styles img,
+.reset-styles ins,
+.reset-styles kbd,
+.reset-styles q,
+.reset-styles samp,
+.reset-styles small,
+.reset-styles strong,
+.reset-styles sub,
+.reset-styles sup,
+.reset-styles var,
+.reset-styles b,
+.reset-styles i,
+.reset-styles dl,
+.reset-styles dt,
+.reset-styles dd,
+.reset-styles ol,
+.reset-styles ul,
+.reset-styles li,
+.reset-styles fieldset,
+.reset-styles form,
+.reset-styles label,
+.reset-styles legend,
+.reset-styles table,
+.reset-styles caption,
+.reset-styles tbody,
+.reset-styles tfoot,
+.reset-styles thead,
+.reset-styles tr,
+.reset-styles th,
+.reset-styles td,
+.reset-styles article,
+.reset-styles aside,
+.reset-styles canvas,
+.reset-styles details,
+.reset-styles figcaption,
+.reset-styles figure,
+.reset-styles footer,
+.reset-styles header,
+.reset-styles hgroup,
+.reset-styles menu,
+.reset-styles nav,
+.reset-styles section,
+.reset-styles summary,
+.reset-styles time,
+.reset-styles mark,
+.reset-styles audio,
+.reset-styles video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+.ipnrm {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: normal;
+  line-break: auto;
+  line-height: 1.2;
+  text-align: left;
+  text-align: start;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: none;
+  white-space: normal;
+  word-break: normal;
+  word-spacing: normal;
+  word-wrap: normal;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  outline: none;
+  font-size: 14px;
+}
+.ipnrm div,
+.ipnrm span,
+.ipnrm object,
+.ipnrm iframe,
+.ipnrm embed,
+.ipnrm h1,
+.ipnrm h2,
+.ipnrm h3,
+.ipnrm h4,
+.ipnrm h5,
+.ipnrm h6,
+.ipnrm p,
+.ipnrm blockquote,
+.ipnrm pre,
+.ipnrm abbr,
+.ipnrm address,
+.ipnrm cite,
+.ipnrm code,
+.ipnrm del,
+.ipnrm dfn,
+.ipnrm em,
+.ipnrm img,
+.ipnrm ins,
+.ipnrm kbd,
+.ipnrm q,
+.ipnrm samp,
+.ipnrm small,
+.ipnrm strong,
+.ipnrm sub,
+.ipnrm sup,
+.ipnrm var,
+.ipnrm b,
+.ipnrm i,
+.ipnrm dl,
+.ipnrm dt,
+.ipnrm dd,
+.ipnrm ol,
+.ipnrm ul,
+.ipnrm li,
+.ipnrm fieldset,
+.ipnrm form,
+.ipnrm label,
+.ipnrm legend,
+.ipnrm table,
+.ipnrm caption,
+.ipnrm tbody,
+.ipnrm tfoot,
+.ipnrm thead,
+.ipnrm tr,
+.ipnrm th,
+.ipnrm td,
+.ipnrm article,
+.ipnrm aside,
+.ipnrm canvas,
+.ipnrm details,
+.ipnrm figcaption,
+.ipnrm figure,
+.ipnrm footer,
+.ipnrm header,
+.ipnrm hgroup,
+.ipnrm menu,
+.ipnrm nav,
+.ipnrm section,
+.ipnrm summary,
+.ipnrm time,
+.ipnrm mark,
+.ipnrm audio,
+.ipnrm video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+.ipnrm:-moz-full-screen {
+  height: 100% !important;
+  width: 100% !important;
+}
+.ipnrm:-webkit-full-screen {
+  height: 100% !important;
+  width: 100% !important;
+}
+.ipnrm:fullscreen {
+  height: 100% !important;
+  width: 100% !important;
+}
+.ipnrm.ipnrm-fullscreen-emulation {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99999;
+  overflow: hidden;
+}
+.ipnrm .ipnrm-notransition {
+  -webkit-transition: none !important;
+  transition: none !important;
+}
+.ipnrm .ipnrm-view,
+.ipnrm .ipnrm-preview,
+.ipnrm .ipnrm-scene,
+.ipnrm .ipnrm-scene canvas,
+.ipnrm .ipnrm-hotspots {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+.ipnrm .ipnrm-preview {
+  background: transparent;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.ipnrm .ipnrm-hotspots {
+  overflow: hidden;
+}
+.ipnrm .ipnrm-hotspot-custom {
+  position: absolute;
+  z-index: 2;
+}
+.ipnrm .ipnrm-hotspot-image {
+  position: relative;
+}
+.ipnrm .ipnrm-hotspot-image img {
+  display: block;
+  max-width: none;
+}
+.ipnrm .ipnrm-hotspot-link,
+.ipnrm .ipnrm-hotspot-link a {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.ipnrm .ipnrm-hotspot-link a {
+  border: none;
+  text-decoration: none;
+}
+.ipnrm .ipnrm-hotspot-data {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.ipnrm .ipnrm-grab {
+  cursor: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjYiIHdpZHRoPSIyNiI+PHBhdGggc3Ryb2tlPSIjMDAwIiBmaWxsPSIjZmZmIiBkPSJNMTUuMyAyMC41czYuMzgtNi43MyA0LjY0LTguMjQtMy40NyAxLjAxLTMuNDcgMS4wMSAzLjYxLTUuNzIgMS40MS02LjQ5Yy0yLjItLjc3LTMuMzMgNC4zNi0zLjMzIDQuMzZzLjg3My01Ljc2LTEuMDYtNS43Ni0xLjU4IDUuMzktMS41OCA1LjM5LS41NzQtNC41OS0yLjE4LTQuMTJjLTEuNjEuNDY4LS41NzIgNS41MS0uNTcyIDUuNTFzLTEuNTgtNC44OS0yLjkzLTMuNzljLTEuMzUgMS4xMS4yNTggNS4yNS41NzIgNi42Mi44MzYgMi40MyAyLjAzIDIuOTQgMi4xNyA1LjU1Ii8+PC9zdmc+) 12 8, default;
+}
+.ipnrm .ipnrm-grabbing {
+  cursor: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjYiIHdpZHRoPSIyNiI+PHBhdGggc3Ryb2tlPSIjMDAwIiBmaWxsPSIjZmZmIiBkPSJNMTUuMyAyMC41czUuMDctNS4yOSAzLjc3LTYuNzRjLTEuMzEtMS40NS0yLjUzLjE0LTIuNTMuMTRzMi43NC0zLjI5LjUzNS00LjA2Yy0yLjItLjc3LTIuNTIgMS4zLTIuNTIgMS4zcy44MS0yLjEzLTEuMTItMi4xMy0xLjUyIDEuNzctMS41MiAxLjc3LS4yNi0xLjU5LTEuODctMS4xMmMtMS42MS40NjgtLjg3NCAyLjE3LS44NzQgMi4xN3MtLjY1LTEuNTUtMi0uNDQ1Yy0xLjM1IDEuMTEtLjY4IDIuMjUtLjM2NCAzLjYyLjgzNiAyLjQzIDIuMDMgMi45NCAyLjE3IDUuNTUiLz48L3N2Zz4=) 12 8, default;
+}
+.ipnrm .ipnrm-target {
+  cursor: crosshair;
+}
+.ipnrm .ipnrm-scene-thumbs {
+  overflow: hidden;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+}
+.ipnrm .ipnrm-toolbar,
+.ipnrm .ipnrm-btn-scene-menu,
+.ipnrm .ipnrm-btn-scene-prev,
+.ipnrm .ipnrm-btn-scene-next,
+.ipnrm .ipnrm-btn-zoom-in,
+.ipnrm .ipnrm-btn-zoom-out,
+.ipnrm .ipnrm-btn-fullscreen,
+.ipnrm .ipnrm-btn-autorotate,
+.ipnrm .ipnrm-btn-share,
+.ipnrm .ipnrm-compass {
+  -webkit-transition: opacity 0.6s;
+  transition: opacity 0.6s;
+}
+.ipnrm.ipnrm-hide-controls .ipnrm-toolbar,
+.ipnrm.ipnrm-hide-controls .ipnrm-btn-scene-menu,
+.ipnrm.ipnrm-hide-controls .ipnrm-btn-scene-prev,
+.ipnrm.ipnrm-hide-controls .ipnrm-btn-scene-next,
+.ipnrm.ipnrm-hide-controls .ipnrm-btn-zoom-in,
+.ipnrm.ipnrm-hide-controls .ipnrm-btn-zoom-out,
+.ipnrm.ipnrm-hide-controls .ipnrm-btn-fullscreen,
+.ipnrm.ipnrm-hide-controls .ipnrm-btn-autorotate,
+.ipnrm.ipnrm-hide-controls .ipnrm-btn-share,
+.ipnrm.ipnrm-hide-controls .ipnrm-compass {
+  opacity: 0 !important;
+}
+.ipnrm .ipnrm-compass,
+.ipnrm .ipnrm-title,
+.ipnrm .ipnrm-toolbar {
+  z-index: 2;
+}
+.ipnrm .ipnrm-btn {
+  z-index: 2;
+}
+.ipnrm .ipnrm-popover {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+  position: absolute;
+  top: 0px;
+  left: -99999px;
+  z-index: 3;
+}
+.ipnrm .ipnrm-popover.ipnrm-hidden {
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+.ipnrm .ipnrm-popover.ipnrm-active {
+  opacity: 1;
+  visibility: visible;
+}

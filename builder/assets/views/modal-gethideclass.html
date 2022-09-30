@@ -1,0 +1,137 @@
+<div id="ipnrm-ui-modal-{{ modalData.id }}" class="ipnrm-ui-modal" tabindex="-1">
+	<div class="ipnrm-ui-modal-dialog">
+		<div class="ipnrm-ui-modal-header">
+			<div class="ipnrm-ui-modal-close" x-ng-click="modalData.deferred.resolve('close');">&times;</div>
+			<div class="ipnrm-ui-modal-title">Select a Popover Hide CSS3 Class</div>
+		</div>
+		<div class="ipnrm-ui-modal-data">
+			<div class="ipnrm-ui-modal-group">
+				<div class="ipnrm-ui-modal-title">General</div>
+				<div class="ipnrm-ui-modal-btn-group">
+					<div class="ipnrm-ui-modal-btn" data-fx-name="fx-bounce" x-ng-click="modalData.selectedClass='fx-bounce'">Bounce</div>
+					<div class="ipnrm-ui-modal-btn" data-fx-name="fx-pulse" x-ng-click="modalData.selectedClass='fx-pulse'">Pulse</div>
+					<div class="ipnrm-ui-modal-btn" data-fx-name="fx-rubberBand" x-ng-click="modalData.selectedClass='fx-rubberBand'">Rubber Band</div>
+					<div class="ipnrm-ui-modal-btn" data-fx-name="fx-shake" x-ng-click="modalData.selectedClass='fx-shake'">Shake</div>
+					<div class="ipnrm-ui-modal-btn" data-fx-name="fx-headShake" x-ng-click="modalData.selectedClass='fx-headShake'">Head Shake</div>
+					<div class="ipnrm-ui-modal-btn" data-fx-name="fx-swing" x-ng-click="modalData.selectedClass='fx-swing'">Swing</div>
+					<div class="ipnrm-ui-modal-btn" data-fx-name="fx-tada" x-ng-click="modalData.selectedClass='fx-tada'">Tada</div>
+					<div class="ipnrm-ui-modal-btn" data-fx-name="fx-wobble" x-ng-click="modalData.selectedClass='fx-wobble'">Wobble</div>
+					<div class="ipnrm-ui-modal-btn" data-fx-name="fx-jello" x-ng-click="modalData.selectedClass='fx-jello'">Jello</div>
+					<div class="ipnrm-ui-modal-btn" data-fx-name="fx-hinge" x-ng-click="modalData.selectedClass='fx-hinge'">Hinge</div>
+				</div>
+			</div>
+			
+			<div class="ipnrm-ui-modal-group">
+				<div class="ipnrm-ui-modal-title">Bounce</div>
+				<div class="ipnrm-ui-modal-btn-group">
+					<div class="ipnrm-ui-modal-btn" data-fx-name="fx-bounceOut" x-ng-click="modalData.selectedClass='fx-bounceOut'">BounceOut</div>
+					<div class="ipnrm-ui-modal-btn" data-fx-name="fx-bounceOutDown" x-ng-click="modalData.selectedClass='fx-bounceOutDown'">BounceOutDown</div>
+					<div class="ipnrm-ui-modal-btn" data-fx-name="fx-bounceOutLeft" x-ng-click="modalData.selectedClass='fx-bounceOutLeft'">BounceOutLeft</div>
+					<div class="ipnrm-ui-modal-btn" data-fx-name="fx-bounceOutRight" x-ng-click="modalData.selectedClass='fx-bounceOutRight'">BounceOutRight</div>
+					<div class="ipnrm-ui-modal-btn" data-fx-name="fx-bounceOutUp" x-ng-click="modalData.selectedClass='fx-bounceOutUp'">BounceOutUp</div>
+				</div>
+			</div>
+
+			<div class="ipnrm-ui-modal-group">
+				<div class="ipnrm-ui-modal-title">Fade</div>
+				<div class="ipnrm-ui-modal-btn-group">
+					<div class="ipnrm-ui-modal-btn" data-fx-name="fx-fadeOut" x-ng-click="modalData.selectedClass='fx-fadeOut'">fadeOut</div>
+					<div class="ipnrm-ui-modal-btn" data-fx-name="fx-fadeOutDown" x-ng-click="modalData.selectedClass='fx-fadeOutDown'">fadeOutDown</div>
+					<div class="ipnrm-ui-modal-btn" data-fx-name="fx-fadeOutLeft" x-ng-click="modalData.selectedClass='fx-fadeOutLeft'">fadeOutLeft</div>
+					<div class="ipnrm-ui-modal-btn" data-fx-name="fx-fadeOutRight" x-ng-click="modalData.selectedClass='fx-fadeOutRight'">fadeOutRight</div>
+					<div class="ipnrm-ui-modal-btn" data-fx-name="fx-fadeOutUp" x-ng-click="modalData.selectedClass='fx-fadeOutUp'">fadeOutUp</div>
+				</div>
+			</div>
+
+			<div class="ipnrm-ui-modal-group">
+				<div class="ipnrm-ui-modal-title">Rotate</div>
+				<div class="ipnrm-ui-modal-btn-group">
+					<div class="ipnrm-ui-modal-btn" data-fx-name="fx-rotateOut" x-ng-click="modalData.selectedClass='fx-rotateOut'">rotateOut</div>
+					<div class="ipnrm-ui-modal-btn" data-fx-name="fx-rotateOutDownLeft" x-ng-click="modalData.selectedClass='fx-rotateOutDownLeft'">rotateOutDownLeft</div>
+					<div class="ipnrm-ui-modal-btn" data-fx-name="fx-rotateOutDownRight" x-ng-click="modalData.selectedClass='fx-rotateOutDownRight'">rotateOutDownRight</div>
+					<div class="ipnrm-ui-modal-btn" data-fx-name="fx-rotateOutUpLeft" x-ng-click="modalData.selectedClass='fx-rotateOutUpLeft'">rotateOutUpLeft</div>
+					<div class="ipnrm-ui-modal-btn" data-fx-name="fx-rotateOutUpRight" x-ng-click="modalData.selectedClass='fx-rotateOutUpRight'">rotateOutUpRight</div>
+				</div>
+			</div>
+
+			<div class="ipnrm-ui-modal-group">
+				<div class="ipnrm-ui-modal-title">Zoom</div>
+				<div class="ipnrm-ui-modal-btn-group">
+					<div class="ipnrm-ui-modal-btn" data-fx-name="fx-zoomOut" x-ng-click="modalData.selectedClass='fx-zoomOut'">zoomOut</div>
+					<div class="ipnrm-ui-modal-btn" data-fx-name="fx-zoomOutDown" x-ng-click="modalData.selectedClass='fx-zoomOutDown'">zoomOutDown</div>
+					<div class="ipnrm-ui-modal-btn" data-fx-name="fx-zoomOutLeft" x-ng-click="modalData.selectedClass='fx-zoomOutLeft'">zoomOutLeft</div>
+					<div class="ipnrm-ui-modal-btn" data-fx-name="fx-zoomOutRight" x-ng-click="modalData.selectedClass='fx-zoomOutRight'">zoomOutRight</div>
+					<div class="ipnrm-ui-modal-btn" data-fx-name="fx-zoomOutUp" x-ng-click="modalData.selectedClass='fx-zoomOutUp'">zoomOutUp</div>
+				</div>
+			</div>
+
+			<div class="ipnrm-ui-modal-group">
+				<div class="ipnrm-ui-modal-title">Slide</div>
+				<div class="ipnrm-ui-modal-btn-group">
+					<div class="ipnrm-ui-modal-btn" data-fx-name="fx-slideOutDown" x-ng-click="modalData.selectedClass='fx-slideOutDown'">slideOutDown</div>
+					<div class="ipnrm-ui-modal-btn" data-fx-name="fx-slideOutLeft" x-ng-click="modalData.selectedClass='fx-slideOutLeft'">slideOutLeft</div>
+					<div class="ipnrm-ui-modal-btn" data-fx-name="fx-slideOutRight" x-ng-click="modalData.selectedClass='fx-slideOutRight'">slideOutRight</div>
+					<div class="ipnrm-ui-modal-btn" data-fx-name="fx-slideOutUp" x-ng-click="modalData.selectedClass='fx-slideOutUp'">slideOutUp</div>
+				</div>
+			</div>
+
+			<div class="ipnrm-ui-modal-group">
+				<div class="ipnrm-ui-modal-title">Perspective</div>
+				<div class="ipnrm-ui-modal-btn-group">
+					<div class="ipnrm-ui-modal-btn" data-fx-name="fx-perspectiveOutDown" x-ng-click="modalData.selectedClass='fx-perspectiveOutDown'">perspectiveOutDown</div>
+					<div class="ipnrm-ui-modal-btn" data-fx-name="fx-perspectiveOutLeft" x-ng-click="modalData.selectedClass='fx-perspectiveOutLeft'">perspectiveOutLeft</div>
+					<div class="ipnrm-ui-modal-btn" data-fx-name="fx-perspectiveOutRight" x-ng-click="modalData.selectedClass='fx-perspectiveOutRight'">perspectiveOutRight</div>
+					<div class="ipnrm-ui-modal-btn" data-fx-name="fx-perspectiveOutUp" x-ng-click="modalData.selectedClass='fx-perspectiveOutUp'">perspectiveOutUp</div>
+				</div>
+			</div>
+
+			<div class="ipnrm-ui-modal-group">
+				<div class="ipnrm-ui-modal-title">Tin</div>
+				<div class="ipnrm-ui-modal-btn-group">
+					<div class="ipnrm-ui-modal-btn" data-fx-name="fx-tinOutDown" x-ng-click="modalData.selectedClass='fx-tinOutDown'">tinOutDown</div>
+					<div class="ipnrm-ui-modal-btn" data-fx-name="fx-tinOutLeft" x-ng-click="modalData.selectedClass='fx-tinOutLeft'">tinOutLeft</div>
+					<div class="ipnrm-ui-modal-btn" data-fx-name="fx-tinOutRight" x-ng-click="modalData.selectedClass='fx-tinOutRight'">tinOutRight</div>
+					<div class="ipnrm-ui-modal-btn" data-fx-name="fx-tinOutUp" x-ng-click="modalData.selectedClass='fx-tinOutUp'">tinOutUp</div>
+				</div>
+			</div>
+
+			<div class="ipnrm-ui-modal-group">
+				<div class="ipnrm-ui-modal-title">Space</div>
+				<div class="ipnrm-ui-modal-btn-group">
+					<div class="ipnrm-ui-modal-btn" data-fx-name="fx-spaceOutDown" x-ng-click="modalData.selectedClass='fx-spaceOutDown'">spaceOutDown</div>
+					<div class="ipnrm-ui-modal-btn" data-fx-name="fx-spaceOutLeft" x-ng-click="modalData.selectedClass='fx-spaceOutLeft'">spaceOutLeft</div>
+					<div class="ipnrm-ui-modal-btn" data-fx-name="fx-spaceOutRight" x-ng-click="modalData.selectedClass='fx-spaceOutRight'">spaceOutRight</div>
+					<div class="ipnrm-ui-modal-btn" data-fx-name="fx-spaceOutUp" x-ng-click="modalData.selectedClass='fx-spaceOutUp'">spaceOutUp</div>
+				</div>
+			</div>
+
+			<div class="ipnrm-ui-modal-group">
+				<div class="ipnrm-ui-modal-title">Flip</div>
+				<div class="ipnrm-ui-modal-btn-group">
+					<div class="ipnrm-ui-modal-btn" data-fx-name="fx-flip" x-ng-click="modalData.selectedClass='fx-flip'">Flip</div>
+					<div class="ipnrm-ui-modal-btn" data-fx-name="fx-flipOutX" x-ng-click="modalData.selectedClass='fx-flipOutX'">flipOutX</div>
+					<div class="ipnrm-ui-modal-btn" data-fx-name="fx-flipOutY" x-ng-click="modalData.selectedClass='fx-flipOutY'">flipOutY</div>
+				</div>
+			</div>
+
+			<div class="ipnrm-ui-modal-group">
+				<div class="ipnrm-ui-modal-title">Advanced</div>
+				<div class="ipnrm-ui-modal-btn-group">
+					<div class="ipnrm-ui-modal-btn" data-fx-name="fx-lightSpeedOut" x-ng-click="modalData.selectedClass='fx-lightSpeedOut'">LightSpeedOut</div>
+					<div class="ipnrm-ui-modal-btn" data-fx-name="fx-rollOut" x-ng-click="modalData.selectedClass='fx-rollOut'">RollOut</div>
+					<div class="ipnrm-ui-modal-btn" data-fx-name="fx-vanishOut" x-ng-click="modalData.selectedClass='fx-vanishOut'">VanishOut</div>
+					<div class="ipnrm-ui-modal-btn" data-fx-name="fx-swashOut" x-ng-click="modalData.selectedClass='fx-swashOut'">SwashOut</div>
+					<div class="ipnrm-ui-modal-btn" data-fx-name="fx-foolishOut" x-ng-click="modalData.selectedClass='fx-foolishOut'">FoolishOut</div>
+					<div class="ipnrm-ui-modal-btn" data-fx-name="fx-holeOut" x-ng-click="modalData.selectedClass='fx-holeIn'">HoleOut</div>
+					<div class="ipnrm-ui-modal-btn" data-fx-name="fx-bombOutLeft" x-ng-click="modalData.selectedClass='fx-bombOutLeft'">BombOutLeft</div>
+					<div class="ipnrm-ui-modal-btn" data-fx-name="fx-bombOutRight" x-ng-click="modalData.selectedClass='fx-bombOutRight'">BombOutRight</div>
+				</div>
+			</div>
+		</div>
+		<div class="ipnrm-ui-modal-footer">
+			<div class="ipnrm-ui-modal-text">Selected class: <b>{{modalData.selectedClass}}</b></div>
+			<div class="ipnrm-ui-modal-btn ipnrm-ui-modal-btn-close" x-ng-click="modalData.deferred.resolve('close');">Close</div>
+			<div class="ipnrm-ui-modal-btn ipnrm-ui-modal-btn-create" x-ng-click="modalData.deferred.resolve(true);">OK</div>
+		</div>
+	</div>
+</div>

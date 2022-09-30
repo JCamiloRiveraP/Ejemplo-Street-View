@@ -1,0 +1,549 @@
+/*!
+  iPanorama 360 - jQuery Virtual Tour
+  @name ipanorama.theme.default.css
+  @description a jQuery plugin for creating a panorama viewer and virtual tours
+  @version 1.3.0
+  @author Max Lawrence 
+  @site http://www.avirtum.com
+  @copyright (c) 2016 Max Lawrence (http://www.avirtum.com)
+*/
+.ipnrm.ipnrm-default .ipnrm-view,
+.ipnrm.ipnrm-theme-default .ipnrm-view {
+  background-color: #fbfbfb;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iODEiIHdpZHRoPSI1NCI+PHBhdGggZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRDFEM0Q0IiBkPSJNMjcuNSAwdjFNLjUgMHY2LjkxN0wyNy41IDFsMjcuMjMgNi4xMDR2LjY4OEwyNy41IDE0IC41IDguMTFWNDJsMjcuMjUgNi4xNjdMNTUgNDJNLjUgODFWNTVsMjcuMjUtNS45NDdMNTUgNTQuOTE2TTI3LjUgMTR2NjciLz48L3N2Zz4=);
+}
+.ipnrm.ipnrm-default .ipnrm-hotspot,
+.ipnrm.ipnrm-theme-default .ipnrm-hotspot {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  z-index: 1;
+}
+.ipnrm.ipnrm-default .ipnrm-hotspot:before,
+.ipnrm.ipnrm-theme-default .ipnrm-hotspot:before,
+.ipnrm.ipnrm-default .ipnrm-hotspot:after,
+.ipnrm.ipnrm-theme-default .ipnrm-hotspot:after {
+  -webkit-transition: background-color ease-out 0.3s;
+  transition: background-color ease-out 0.3s;
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+}
+.ipnrm.ipnrm-default .ipnrm-hotspot:before,
+.ipnrm.ipnrm-theme-default .ipnrm-hotspot:before {
+  width: 26px;
+  height: 26px;
+  margin-top: -13px;
+  margin-left: -13px;
+  background-color: #000000;
+}
+.ipnrm.ipnrm-default .ipnrm-hotspot:hover:before,
+.ipnrm.ipnrm-theme-default .ipnrm-hotspot:hover:before {
+  background-color: #ffffff;
+}
+.ipnrm.ipnrm-default .ipnrm-hotspot:after,
+.ipnrm.ipnrm-theme-default .ipnrm-hotspot:after {
+  width: 16px;
+  height: 16px;
+  margin-top: -8px;
+  margin-left: -8px;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+}
+.ipnrm.ipnrm-default .ipnrm-hotspot:hover:after,
+.ipnrm.ipnrm-theme-default .ipnrm-hotspot:hover:after {
+  background-color: #000000;
+}
+.ipnrm.ipnrm-default .ipnrm-hotspot.ipnrm-hotspot-scene:before,
+.ipnrm.ipnrm-theme-default .ipnrm-hotspot.ipnrm-hotspot-scene:before {
+  background-color: #ffffff;
+}
+.ipnrm.ipnrm-default .ipnrm-hotspot.ipnrm-hotspot-scene:hover:before,
+.ipnrm.ipnrm-theme-default .ipnrm-hotspot.ipnrm-hotspot-scene:hover:before {
+  background-color: #000000;
+}
+.ipnrm.ipnrm-default .ipnrm-hotspot.ipnrm-hotspot-scene:after,
+.ipnrm.ipnrm-theme-default .ipnrm-hotspot.ipnrm-hotspot-scene:after {
+  background-color: #000000;
+  border: 1px solid #ffffff;
+}
+.ipnrm.ipnrm-default .ipnrm-hotspot.ipnrm-hotspot-scene:hover:after,
+.ipnrm.ipnrm-theme-default .ipnrm-hotspot.ipnrm-hotspot-scene:hover:after {
+  background-color: #ffffff;
+}
+.ipnrm.ipnrm-default .ipnrm-hotspot.ipnrm-hotspot-scene:before,
+.ipnrm.ipnrm-theme-default .ipnrm-hotspot.ipnrm-hotspot-scene:before {
+  -webkit-animation: ipanorama-hotspot-pulse-default 3s infinite linear;
+  animation: ipanorama-hotspot-pulse-default 3s infinite linear;
+}
+.ipnrm.ipnrm-default .ipnrm-info,
+.ipnrm.ipnrm-theme-default .ipnrm-info,
+.ipnrm.ipnrm-default .ipnrm-btn-load,
+.ipnrm.ipnrm-theme-default .ipnrm-btn-load,
+.ipnrm.ipnrm-default .ipnrm-load-info,
+.ipnrm.ipnrm-theme-default .ipnrm-load-info {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: normal;
+  line-break: auto;
+  line-height: 1.2;
+  text-align: left;
+  text-align: start;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: none;
+  white-space: normal;
+  word-break: normal;
+  word-spacing: normal;
+  word-wrap: normal;
+  display: table;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  height: 80px;
+  margin: -40px 0 0 -75px;
+  background-color: #ffffff;
+  color: #333333;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 3px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  z-index: 1;
+}
+.ipnrm.ipnrm-default .ipnrm-btn-load,
+.ipnrm.ipnrm-theme-default .ipnrm-btn-load {
+  cursor: pointer;
+}
+.ipnrm.ipnrm-default .ipnrm-btn-load:hover,
+.ipnrm.ipnrm-theme-default .ipnrm-btn-load:hover {
+  background-color: #efefef;
+}
+.ipnrm.ipnrm-default .ipnrm-info p,
+.ipnrm.ipnrm-theme-default .ipnrm-info p,
+.ipnrm.ipnrm-default .ipnrm-btn-load p,
+.ipnrm.ipnrm-theme-default .ipnrm-btn-load p,
+.ipnrm.ipnrm-default .ipnrm-load-info-inner,
+.ipnrm.ipnrm-theme-default .ipnrm-load-info-inner {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0 10px;
+}
+.ipnrm.ipnrm-default .ipnrm-load-progress,
+.ipnrm.ipnrm-theme-default .ipnrm-load-progress {
+  position: relative;
+  width: 80%;
+  height: 10px;
+  margin-left: 10%;
+  margin-top: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 3px;
+}
+.ipnrm.ipnrm-default .ipnrm-load-progress-bar,
+.ipnrm.ipnrm-theme-default .ipnrm-load-progress-bar {
+  height: 100%;
+  width: 0%;
+  background-color: #999999;
+}
+.ipnrm.ipnrm-default .ipnrm-scene-thumbs,
+.ipnrm.ipnrm-theme-default .ipnrm-scene-thumbs {
+  -webkit-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2);
+  position: absolute;
+  background-color: #fff;
+  cursor: move;
+  display: none;
+}
+.ipnrm.ipnrm-default .ipnrm-scene-thumbs.ipnrm-active,
+.ipnrm.ipnrm-theme-default .ipnrm-scene-thumbs.ipnrm-active {
+  display: block;
+}
+.ipnrm.ipnrm-default .ipnrm-scene-thumbs .ipnrm-scene-thumbs-inner,
+.ipnrm.ipnrm-theme-default .ipnrm-scene-thumbs .ipnrm-scene-thumbs-inner {
+  -webkit-transition: all 0.5s cubic-bezier(0, 1.1, 1, 1.1);
+  transition: all 0.5s cubic-bezier(0, 1.1, 1, 1.1);
+  position: absolute;
+  white-space: nowrap;
+}
+.ipnrm.ipnrm-default .ipnrm-scene-thumbs .ipnrm-scene-thumb,
+.ipnrm.ipnrm-theme-default .ipnrm-scene-thumbs .ipnrm-scene-thumb {
+  margin: 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+.ipnrm.ipnrm-default .ipnrm-scene-thumbs .ipnrm-scene-thumb:hover,
+.ipnrm.ipnrm-theme-default .ipnrm-scene-thumbs .ipnrm-scene-thumb:hover {
+  border-color: rgba(0, 0, 0, 0.5);
+}
+.ipnrm.ipnrm-default .ipnrm-scene-thumbs .ipnrm-scene-thumb.ipnrm-active,
+.ipnrm.ipnrm-theme-default .ipnrm-scene-thumbs .ipnrm-scene-thumb.ipnrm-active {
+  border: 2px solid rgba(0, 0, 0, 0.8);
+}
+.ipnrm.ipnrm-default .ipnrm-scene-thumbs .ipnrm-scene-thumb .ipnrm-scene-thumb-img,
+.ipnrm.ipnrm-theme-default .ipnrm-scene-thumbs .ipnrm-scene-thumb .ipnrm-scene-thumb-img {
+  display: block;
+}
+.ipnrm.ipnrm-default.ipnrm-scene-thumbs-active.ipnrm-scene-thumbs-v .ipnrm-view,
+.ipnrm.ipnrm-theme-default.ipnrm-scene-thumbs-active.ipnrm-scene-thumbs-v .ipnrm-view {
+  left: 150px;
+}
+.ipnrm.ipnrm-default.ipnrm-scene-thumbs-active.ipnrm-scene-thumbs-v .ipnrm-btn.ipnrm-btn-zoom-in,
+.ipnrm.ipnrm-theme-default.ipnrm-scene-thumbs-active.ipnrm-scene-thumbs-v .ipnrm-btn.ipnrm-btn-zoom-in,
+.ipnrm.ipnrm-default.ipnrm-scene-thumbs-active.ipnrm-scene-thumbs-v .ipnrm-btn.ipnrm-btn-zoom-out,
+.ipnrm.ipnrm-theme-default.ipnrm-scene-thumbs-active.ipnrm-scene-thumbs-v .ipnrm-btn.ipnrm-btn-zoom-out,
+.ipnrm.ipnrm-default.ipnrm-scene-thumbs-active.ipnrm-scene-thumbs-v .ipnrm-btn.ipnrm-btn-scene-prev,
+.ipnrm.ipnrm-theme-default.ipnrm-scene-thumbs-active.ipnrm-scene-thumbs-v .ipnrm-btn.ipnrm-btn-scene-prev,
+.ipnrm.ipnrm-default.ipnrm-scene-thumbs-active.ipnrm-scene-thumbs-v .ipnrm-btn.ipnrm-btn-scene-next,
+.ipnrm.ipnrm-theme-default.ipnrm-scene-thumbs-active.ipnrm-scene-thumbs-v .ipnrm-btn.ipnrm-btn-scene-next,
+.ipnrm.ipnrm-default.ipnrm-scene-thumbs-active.ipnrm-scene-thumbs-v .ipnrm-btn.ipnrm-btn-scene-menu,
+.ipnrm.ipnrm-theme-default.ipnrm-scene-thumbs-active.ipnrm-scene-thumbs-v .ipnrm-btn.ipnrm-btn-scene-menu {
+  left: 155px;
+}
+.ipnrm.ipnrm-default.ipnrm-scene-thumbs-active.ipnrm-scene-thumbs-v .ipnrm-title,
+.ipnrm.ipnrm-theme-default.ipnrm-scene-thumbs-active.ipnrm-scene-thumbs-v .ipnrm-title {
+  left: 155px;
+}
+.ipnrm.ipnrm-default.ipnrm-scene-thumbs-active.ipnrm-scene-thumbs-h .ipnrm-view,
+.ipnrm.ipnrm-theme-default.ipnrm-scene-thumbs-active.ipnrm-scene-thumbs-h .ipnrm-view {
+  bottom: 125px;
+}
+.ipnrm.ipnrm-default.ipnrm-scene-thumbs-active.ipnrm-scene-thumbs-h .ipnrm-title,
+.ipnrm.ipnrm-theme-default.ipnrm-scene-thumbs-active.ipnrm-scene-thumbs-h .ipnrm-title {
+  bottom: 130px;
+}
+.ipnrm.ipnrm-default.ipnrm-scene-thumbs-active.ipnrm-scene-thumbs-h .ipnrm-compass,
+.ipnrm.ipnrm-theme-default.ipnrm-scene-thumbs-active.ipnrm-scene-thumbs-h .ipnrm-compass {
+  bottom: 130px;
+}
+.ipnrm.ipnrm-default.ipnrm-scene-thumbs-v .ipnrm-scene-thumbs,
+.ipnrm.ipnrm-theme-default.ipnrm-scene-thumbs-v .ipnrm-scene-thumbs {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 150px;
+}
+.ipnrm.ipnrm-default.ipnrm-scene-thumbs-v .ipnrm-scene-thumbs .ipnrm-scene-thumb,
+.ipnrm.ipnrm-theme-default.ipnrm-scene-thumbs-v .ipnrm-scene-thumbs .ipnrm-scene-thumb {
+  display: block;
+}
+.ipnrm.ipnrm-default.ipnrm-scene-thumbs-v .ipnrm-scene-thumbs .ipnrm-scene-thumb .ipnrm-scene-thumb-img,
+.ipnrm.ipnrm-theme-default.ipnrm-scene-thumbs-v .ipnrm-scene-thumbs .ipnrm-scene-thumb .ipnrm-scene-thumb-img {
+  width: 100%;
+}
+.ipnrm.ipnrm-default.ipnrm-scene-thumbs-h .ipnrm-view,
+.ipnrm.ipnrm-theme-default.ipnrm-scene-thumbs-h .ipnrm-view {
+  bottom: 0px;
+}
+.ipnrm.ipnrm-default.ipnrm-scene-thumbs-h .ipnrm-scene-thumbs,
+.ipnrm.ipnrm-theme-default.ipnrm-scene-thumbs-h .ipnrm-scene-thumbs {
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 125px;
+}
+.ipnrm.ipnrm-default.ipnrm-scene-thumbs-h .ipnrm-scene-thumbs .ipnrm-scene-thumb,
+.ipnrm.ipnrm-theme-default.ipnrm-scene-thumbs-h .ipnrm-scene-thumbs .ipnrm-scene-thumb {
+  display: inline-block;
+}
+.ipnrm.ipnrm-default.ipnrm-scene-thumbs-h .ipnrm-scene-thumbs .ipnrm-scene-thumb .ipnrm-scene-thumb-img,
+.ipnrm.ipnrm-theme-default.ipnrm-scene-thumbs-h .ipnrm-scene-thumbs .ipnrm-scene-thumb .ipnrm-scene-thumb-img {
+  height: 100px;
+}
+.ipnrm.ipnrm-default .ipnrm-compass,
+.ipnrm.ipnrm-theme-default .ipnrm-compass {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  width: 26px;
+  height: 26px;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAe1JREFUeNrsVj1rwmAQNpWIThWVksFFXZxEBwdBJ1exP0HcGv+CFIcuujmU+g9UxMXNf6GjoFPr0HTQQfxK0WueKwmWVhMtSoceHJx39zxP8r73vlEgItslTPgXOpuQLMs3y+Xyvtfr3Y7HY2kymYjIezyed7/f/xqLxToul+uhVqu9HSSC0D4vl8tyNBpV0Ga32ykcDlM8HmdHjBxq6EHvIa6fk9qb5vP5J0EQmCiZTJJGRLDVasUOQw419KAXGH2VLAlVKpU7p9O5dbvdVCwWaT6fM7GqqpTJZNgRw1BDD3qBAdaSUKvVutaWAuvNBLptNhv+jbxeQ043vQYsOEyFcrncIwCJRIIURTGI6vU6iaJoCCFuNptGHb3AoAYOU6FIJPLicDioWq0aJP1+nzdfF9FdkiRqt9tGHzDAahzPpkJer1fVxpZGoxGDp9MpZbPZbyK6p9Np7oEBAyw4TIUA1p6IgYvFggqFAk8UHE+768hhxNGDXhiwn6fmK++V1ZMdCARsw+HQNpvN2BEjt91urREcs3TdbtfYD8TIoXbS0u0bhlAoRD6fjwaDATviYDDItZOGYd94NxoNfoNUKsWOvel0OqePt9UDWyqVaNeOPrBWr6D1ev27K+iil+o5PhMX+/D9/zn5+0IfAgwAjiglaYRWLXQAAAAASUVORK5CYII=);
+  background-repeat: no-repeat;
+}
+.ipnrm.ipnrm-default .ipnrm-btn,
+.ipnrm.ipnrm-theme-default .ipnrm-btn {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  background-color: #ffffff;
+  background-image: url(data:image/png;base64,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);
+  cursor: pointer;
+}
+.ipnrm.ipnrm-default .ipnrm-btn:hover,
+.ipnrm.ipnrm-theme-default .ipnrm-btn:hover {
+  background-color: #efefef;
+}
+.ipnrm.ipnrm-default .ipnrm-btn.ipnrm-btn-zoom-in,
+.ipnrm.ipnrm-theme-default .ipnrm-btn.ipnrm-btn-zoom-in {
+  top: 5px;
+  left: 5px;
+  background-position: 0 -182px;
+}
+.ipnrm.ipnrm-default .ipnrm-btn.ipnrm-btn-zoom-out,
+.ipnrm.ipnrm-theme-default .ipnrm-btn.ipnrm-btn-zoom-out {
+  top: 36px;
+  left: 5px;
+  background-position: 0 -208px;
+}
+.ipnrm.ipnrm-default .ipnrm-btn.ipnrm-btn-scene-prev,
+.ipnrm.ipnrm-theme-default .ipnrm-btn.ipnrm-btn-scene-prev {
+  top: 67px;
+  left: 5px;
+  background-position: 0 -26px;
+}
+.ipnrm.ipnrm-default .ipnrm-btn.ipnrm-btn-scene-next,
+.ipnrm.ipnrm-theme-default .ipnrm-btn.ipnrm-btn-scene-next {
+  top: 98px;
+  left: 5px;
+  background-position: 0 -52px;
+}
+.ipnrm.ipnrm-default .ipnrm-btn.ipnrm-btn-scene-menu,
+.ipnrm.ipnrm-theme-default .ipnrm-btn.ipnrm-btn-scene-menu {
+  top: 129px;
+  left: 5px;
+  background-position: 0 0;
+}
+.ipnrm.ipnrm-default .ipnrm-btn.ipnrm-btn-share,
+.ipnrm.ipnrm-theme-default .ipnrm-btn.ipnrm-btn-share {
+  top: 5px;
+  right: 36px;
+  background-position: 0 -234px;
+}
+.ipnrm.ipnrm-default .ipnrm-btn.ipnrm-btn-fullscreen,
+.ipnrm.ipnrm-theme-default .ipnrm-btn.ipnrm-btn-fullscreen {
+  top: 5px;
+  right: 5px;
+  background-position: 0 -78px;
+}
+.ipnrm.ipnrm-default .ipnrm-btn.ipnrm-btn-fullscreen.ipnrm-active,
+.ipnrm.ipnrm-theme-default .ipnrm-btn.ipnrm-btn-fullscreen.ipnrm-active {
+  background-position: 0 -104px;
+}
+.ipnrm.ipnrm-default .ipnrm-btn.ipnrm-btn-autorotate,
+.ipnrm.ipnrm-theme-default .ipnrm-btn.ipnrm-btn-autorotate {
+  top: 36px;
+  right: 5px;
+  background-position: 0 -312px;
+}
+.ipnrm.ipnrm-default .ipnrm-btn.ipnrm-btn-autorotate.ipnrm-active,
+.ipnrm.ipnrm-theme-default .ipnrm-btn.ipnrm-btn-autorotate.ipnrm-active {
+  background-position: 0 -338px;
+}
+.ipnrm.ipnrm-default.ipnrm-no-zoom-ctrl .ipnrm-btn.ipnrm-btn-scene-prev,
+.ipnrm.ipnrm-theme-default.ipnrm-no-zoom-ctrl .ipnrm-btn.ipnrm-btn-scene-prev {
+  top: 5px;
+}
+.ipnrm.ipnrm-default.ipnrm-no-zoom-ctrl .ipnrm-btn.ipnrm-btn-scene-next,
+.ipnrm.ipnrm-theme-default.ipnrm-no-zoom-ctrl .ipnrm-btn.ipnrm-btn-scene-next {
+  top: 36px;
+}
+.ipnrm.ipnrm-default.ipnrm-no-zoom-ctrl .ipnrm-btn.ipnrm-btn-scene-menu,
+.ipnrm.ipnrm-theme-default.ipnrm-no-zoom-ctrl .ipnrm-btn.ipnrm-btn-scene-menu {
+  top: 67px;
+}
+.ipnrm.ipnrm-default.ipnrm-no-zoom-ctrl.ipnrm-no-scene-nextprev-ctrl .ipnrm-btn.ipnrm-btn-scene-menu,
+.ipnrm.ipnrm-theme-default.ipnrm-no-zoom-ctrl.ipnrm-no-scene-nextprev-ctrl .ipnrm-btn.ipnrm-btn-scene-menu {
+  top: 5px;
+}
+.ipnrm.ipnrm-default.ipnrm-no-fullscreen-ctrl .ipnrm-btn.ipnrm-btn-share,
+.ipnrm.ipnrm-theme-default.ipnrm-no-fullscreen-ctrl .ipnrm-btn.ipnrm-btn-share {
+  right: 5px;
+}
+.ipnrm.ipnrm-default .ipnrm-title,
+.ipnrm.ipnrm-theme-default .ipnrm-title {
+  position: absolute;
+  left: 5px;
+  bottom: 5px;
+  max-width: 300px;
+  background-color: #ffffff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  padding: 5px 15px;
+}
+.ipnrm.ipnrm-default .ipnrm-popover,
+.ipnrm.ipnrm-theme-default .ipnrm-popover {
+  max-width: 276px;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 6px;
+}
+.ipnrm.ipnrm-default .ipnrm-popover.ipnrm-close .ipnrm-close,
+.ipnrm.ipnrm-theme-default .ipnrm-popover.ipnrm-close .ipnrm-close {
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  position: absolute;
+  right: 1px;
+  top: 1px;
+  width: 16px;
+  height: 16px;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNnB4IiBoZWlnaHQ9IjE2cHgiPjxwYXRoIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIzIiBkPSJNMy4yNjEsMy4yNjJsOS40NzgsOS40NzcgTTEyLjczOCwzLjI2MmwtOS40NzgsOS40NzciLz48L3N2Zz4=);
+  cursor: pointer;
+  opacity: 0.4;
+}
+.ipnrm.ipnrm-default .ipnrm-popover.ipnrm-close .ipnrm-close:hover,
+.ipnrm.ipnrm-theme-default .ipnrm-popover.ipnrm-close .ipnrm-close:hover {
+  opacity: 0.8;
+}
+.ipnrm.ipnrm-default .ipnrm-popover .ipnrm-content,
+.ipnrm.ipnrm-theme-default .ipnrm-popover .ipnrm-content {
+  padding: 10px 15px;
+}
+.ipnrm.ipnrm-default .ipnrm-popover.ipnrm-close .ipnrm-content,
+.ipnrm.ipnrm-theme-default .ipnrm-popover.ipnrm-close .ipnrm-content {
+  padding: 15px;
+}
+.ipnrm.ipnrm-default .ipnrm-popover.ipnrm-popover-left.ipnrm-close .ipnrm-close,
+.ipnrm.ipnrm-theme-default .ipnrm-popover.ipnrm-popover-left.ipnrm-close .ipnrm-close,
+.ipnrm.ipnrm-default .ipnrm-popover.ipnrm-popover-top-left.ipnrm-close .ipnrm-close,
+.ipnrm.ipnrm-theme-default .ipnrm-popover.ipnrm-popover-top-left.ipnrm-close .ipnrm-close,
+.ipnrm.ipnrm-default .ipnrm-popover.ipnrm-popover-bottom-left.ipnrm-close .ipnrm-close,
+.ipnrm.ipnrm-theme-default .ipnrm-popover.ipnrm-popover-bottom-left.ipnrm-close .ipnrm-close {
+  left: 1px;
+}
+.ipnrm.ipnrm-default .ipnrm-popover.ipnrm-popover-top,
+.ipnrm.ipnrm-theme-default .ipnrm-popover.ipnrm-popover-top {
+  margin-top: -16px;
+}
+.ipnrm.ipnrm-default .ipnrm-popover.ipnrm-popover-right,
+.ipnrm.ipnrm-theme-default .ipnrm-popover.ipnrm-popover-right {
+  margin-left: 16px;
+}
+.ipnrm.ipnrm-default .ipnrm-popover.ipnrm-popover-bottom,
+.ipnrm.ipnrm-theme-default .ipnrm-popover.ipnrm-popover-bottom {
+  margin-top: 16px;
+}
+.ipnrm.ipnrm-default .ipnrm-popover.ipnrm-popover-left,
+.ipnrm.ipnrm-theme-default .ipnrm-popover.ipnrm-popover-left {
+  margin-left: -16px;
+}
+.ipnrm.ipnrm-default .ipnrm-popover.ipnrm-popover-top-right .ipnrm-arrow,
+.ipnrm.ipnrm-theme-default .ipnrm-popover.ipnrm-popover-top-right .ipnrm-arrow,
+.ipnrm.ipnrm-default .ipnrm-popover.ipnrm-popover-top-left .ipnrm-arrow,
+.ipnrm.ipnrm-theme-default .ipnrm-popover.ipnrm-popover-top-left .ipnrm-arrow,
+.ipnrm.ipnrm-default .ipnrm-popover.ipnrm-popover-bottom-right .ipnrm-arrow,
+.ipnrm.ipnrm-theme-default .ipnrm-popover.ipnrm-popover-bottom-right .ipnrm-arrow,
+.ipnrm.ipnrm-default .ipnrm-popover.ipnrm-popover-bottom-left .ipnrm-arrow,
+.ipnrm.ipnrm-theme-default .ipnrm-popover.ipnrm-popover-bottom-left .ipnrm-arrow {
+  display: none;
+}
+.ipnrm.ipnrm-default .ipnrm-popover > .ipnrm-arrow,
+.ipnrm.ipnrm-theme-default .ipnrm-popover > .ipnrm-arrow,
+.ipnrm.ipnrm-default .ipnrm-popover > .ipnrm-arrow:after,
+.ipnrm.ipnrm-theme-default .ipnrm-popover > .ipnrm-arrow:after {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+.ipnrm.ipnrm-default .ipnrm-popover > .ipnrm-arrow,
+.ipnrm.ipnrm-theme-default .ipnrm-popover > .ipnrm-arrow {
+  border-width: 11px;
+}
+.ipnrm.ipnrm-default .ipnrm-popover > .ipnrm-arrow:after,
+.ipnrm.ipnrm-theme-default .ipnrm-popover > .ipnrm-arrow:after {
+  content: "";
+  border-width: 11px;
+}
+.ipnrm.ipnrm-default .ipnrm-popover.ipnrm-popover-top > .ipnrm-arrow,
+.ipnrm.ipnrm-theme-default .ipnrm-popover.ipnrm-popover-top > .ipnrm-arrow {
+  left: 50%;
+  margin-left: -11px;
+  border-bottom-width: 0;
+  border-top-color: rgba(0, 0, 0, 0.2);
+  bottom: -11px;
+}
+.ipnrm.ipnrm-default .ipnrm-popover.ipnrm-popover-top > .ipnrm-arrow:after,
+.ipnrm.ipnrm-theme-default .ipnrm-popover.ipnrm-popover-top > .ipnrm-arrow:after {
+  content: "";
+  bottom: 1px;
+  margin-left: -11px;
+  border-bottom-width: 0;
+  border-top-color: #ffffff;
+}
+.ipnrm.ipnrm-default .ipnrm-popover.ipnrm-popover-right > .ipnrm-arrow,
+.ipnrm.ipnrm-theme-default .ipnrm-popover.ipnrm-popover-right > .ipnrm-arrow {
+  top: 50%;
+  left: -11px;
+  margin-top: -11px;
+  border-left-width: 0;
+  border-right-color: rgba(0, 0, 0, 0.2);
+}
+.ipnrm.ipnrm-default .ipnrm-popover.ipnrm-popover-right > .ipnrm-arrow:after,
+.ipnrm.ipnrm-theme-default .ipnrm-popover.ipnrm-popover-right > .ipnrm-arrow:after {
+  content: "";
+  left: 1px;
+  bottom: -11px;
+  border-left-width: 0;
+  border-right-color: #ffffff;
+}
+.ipnrm.ipnrm-default .ipnrm-popover.ipnrm-popover-bottom > .ipnrm-arrow,
+.ipnrm.ipnrm-theme-default .ipnrm-popover.ipnrm-popover-bottom > .ipnrm-arrow {
+  left: 50%;
+  margin-left: -11px;
+  border-top-width: 0;
+  border-bottom-color: rgba(0, 0, 0, 0.2);
+  top: -11px;
+}
+.ipnrm.ipnrm-default .ipnrm-popover.ipnrm-popover-bottom > .ipnrm-arrow:after,
+.ipnrm.ipnrm-theme-default .ipnrm-popover.ipnrm-popover-bottom > .ipnrm-arrow:after {
+  content: "";
+  top: 1px;
+  margin-left: -11px;
+  border-top-width: 0;
+  border-bottom-color: #ffffff;
+}
+.ipnrm.ipnrm-default .ipnrm-popover.ipnrm-popover-left > .ipnrm-arrow,
+.ipnrm.ipnrm-theme-default .ipnrm-popover.ipnrm-popover-left > .ipnrm-arrow {
+  top: 50%;
+  right: -11px;
+  margin-top: -11px;
+  border-right-width: 0;
+  border-left-color: rgba(0, 0, 0, 0.2);
+}
+.ipnrm.ipnrm-default .ipnrm-popover.ipnrm-popover-left > .ipnrm-arrow:after,
+.ipnrm.ipnrm-theme-default .ipnrm-popover.ipnrm-popover-left > .ipnrm-arrow:after {
+  content: "";
+  right: 1px;
+  border-right-width: 0;
+  border-left-color: #ffffff;
+  bottom: -11px;
+}
+@-webkit-keyframes ipanorama-hotspot-pulse-default {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes ipanorama-hotspot-pulse-default {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}

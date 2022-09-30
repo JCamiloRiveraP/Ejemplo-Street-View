@@ -1,0 +1,21 @@
+<div id="ipnrm-ui-modal-{{ modalData.id }}" class="ipnrm-ui-modal" tabindex="-1">
+	<div class="ipnrm-ui-modal-dialog">
+		<div class="ipnrm-ui-modal-header">
+			<div class="ipnrm-ui-modal-close" x-ng-click="modalData.deferred.resolve('close');">&times;</div>
+			<div class="ipnrm-ui-modal-title">Select Images</div>
+		</div>
+		<div class="ipnrm-ui-modal-data">
+			<div class="ipnrm-ui-modal-info">
+				Before select, you should upload images to 'upload' folder via FTP
+			</div>
+	
+			<select class="ipnrm-ui-modal-long" size="10" x-ng-dblclick="modalData.fn.selectFile(modalData)" x-ng-options="file as file.filename for file in modalData.files" x-ng-model="modalData.selectedFile">
+				<option style="display:none" value=""></option>
+			</select>
+		</div>
+		<div class="ipnrm-ui-modal-footer">
+			<div class="ipnrm-ui-modal-btn ipnrm-ui-modal-btn-close" x-ng-click="modalData.deferred.resolve('close');">Close</div>
+			<div class="ipnrm-ui-modal-btn ipnrm-ui-modal-btn-select" x-ng-click="modalData.fn.selectFile(modalData);">Select</div>
+		</div>
+	</div>
+</div>

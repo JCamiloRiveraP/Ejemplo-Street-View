@@ -1,0 +1,406 @@
+/*!
+  Documentation
+  @name style.css
+  @description file with documentation
+  @author Max Lawrence 
+  @site http://www.avirtum.com
+  @copyright (c) 2016 Max Lawrence (http://www.avirtum.com)
+*/
+
+@color-main:#34495d;
+@color-black:#000;
+@color-gray:#353535;
+@color-white:#fff;
+@color-milk:#f4f4f4;
+@color-orange:#ffca03;
+@color-green:#25b89a;
+
+
+//===========================================
+// Fonts
+//===========================================
+@page-droid-serif-font-family:"Droid Serif", sans-serif;
+@page-droid-sans-font-family:"Droid Sans", Helvetica, Arial, sans-serif;
+@page-arial-font-family:Arial, sans-serif;
+
+
+//===========================================
+// Mixins
+//===========================================
+.clear-fix {
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+    // Fixes Opera/contenteditable bug:
+    // http://nicolasgallagher.com/micro-clearfix-hack/#comment-36952
+    line-height: 0;
+  }
+  &:after {
+    clear: both;
+  }
+}
+.shadow(@string) {
+    -webkit-box-shadow:@string;
+    -moz-box-shadow:@string;
+    box-shadow:@string;
+}
+.transition(@string) {
+    -webkit-transition:@string;
+    -moz-transition:@string;
+    -ms-transition:@string;
+    -o-transition:@string;
+    transition:@string;
+}
+.hidden() {
+    opacity:0;
+    visibility:hidden;
+}
+.visible() {
+    opacity:1;
+    visibility:visible;
+}
+//===========================================
+// Common
+//===========================================
+body,
+html {
+    height:100%;
+    width:100%;
+    margin:0;
+    padding:0;
+    background-color:@color-milk;
+}
+body.slide-menu-active {
+    .transition(.3s);
+    padding-left:300px;
+}
+mark {
+    padding:5px 15px;
+    background-color:@color-green;
+    color:#fff;
+}
+hr {
+    border-top:1px solid fade(@color-gray,40%);
+}
+//------------------------------------------
+table {
+    font-family:@page-arial-font-family;
+    
+    thead {
+        background-color:@color-gray;
+        color:@color-white;
+        letter-spacing:1px;
+    }
+    tr > td:first-child {
+        position:relative;
+        background-color:fade(@color-black,7%);
+    }
+}
+//------------------------------------------
+::-webkit-scrollbar {
+    width:5px;
+}
+::-webkit-scrollbar-track {
+    background-color:transparent;
+}
+::-webkit-scrollbar-thumb {
+    background-color:rgba(255,255,255,0.6);
+}
+/*===========================================
+ * Additional
+ *===========================================*/
+.wrap-page {
+    width:100%;
+    overflow-x:hidden;
+}
+.wrap-header {
+    .shadow(0px 0px 11px 2px rgba(50, 50, 50, 0.1));
+    position:relative;
+    padding:22px 0 0;
+    background-color:@color-main;
+    border-bottom:1px solid darken(@color-main,15%);
+}
+.wrap-footer {
+    background-color:darken(@color-main,10%);
+    .footer {
+        padding:5px 15px;
+        
+        p {
+            color:@color-white;
+            font-size:12px;
+            margin:0;
+        }
+    }
+}
+//------------------------------------------
+#slide-menu-toggle {
+    .transition(.3s);
+    position:fixed;
+    top:0;
+    left:0;
+    width:40px;
+    height:40px;
+    line-height:40px;
+    font-size:24px;
+    text-align:center;
+    background-color:darken(@color-main,15%);
+    color:@color-white;
+    z-index:999;
+    cursor:pointer;
+    
+    &:before {
+        content: "\f0c9";
+        font-family:FontAwesome;
+    }
+    
+    &.active {
+        left:300px;
+        background-color:lighten(@color-green,15%);
+    }
+}
+#slide-menu {
+    .shadow(0px 0px 5px 2px rgba(50, 50, 50, 0.5));
+    position:relative;
+    font-size:16px;
+    background-color:@color-main;
+    border:none;
+    border-radius:0;
+    border-right:1px solid darken(@color-main,15%);
+    z-index:999;
+    
+    .brand {
+        padding:30px 15px;
+        //border-bottom:1px solid darken(@color-main,3%);
+        
+        img {
+            display:block;
+            margin:0 auto;
+        }
+    }
+    
+    .menu {
+        position:relative;
+        width:100%;
+        max-height:70%;
+        overflow-y:auto;
+        overflow-x:hidden;
+    }
+    
+    ul {
+        list-style:none;
+        margin:0;
+        padding:0;
+        
+        li {
+            a {
+                //.shadow(inset 0px 2px 2px -2px rgba(255,255,255,0.3));
+                font-family:@page-droid-sans-font-family;
+                font-size:16px;
+                display:block;
+                text-decoration:none;
+                padding:10px 15px;
+                color:@color-white;
+                //border-bottom:1px solid darken(@color-main,3%);
+                
+                &:hover {
+                    background-color:@color-green;
+                }
+            }
+        }
+       
+    }
+}
+//------------------------------------------
+.header {
+    text-align:center;
+    color:#fff;
+}
+.header-title h1 {
+    font-family:@page-droid-serif-font-family;
+    font-size:36px;
+    line-height:1.3;
+    margin:0 40px 15px;
+}
+.header-subtitle {
+    font-family:@page-droid-serif-font-family;
+    font-size:16px;
+    font-weight:bold;
+    letter-spacing:3px;
+}
+//------------------------------------------
+.social-list {
+    .clear-fix();
+    float:right;
+    
+    a {
+        display:block;
+        float:right;
+        padding:2px 7px;
+        min-width:27px;
+        font-size:22px;
+        text-decoration:none;
+        text-align:center;
+        color:#fff;
+        
+        
+        &.site:hover {
+            background-color:@color-green;
+            color:#fff;
+        }
+        &.site::before {
+            content: "\f0ac";
+            font-family:FontAwesome;
+        }
+        
+        &.twitter:hover {
+            background-color:#33ccff;
+            color:#fff;
+        }
+        &.twitter::before {
+            content: "\f099";
+            font-family:FontAwesome;
+        }
+        
+        &.github:hover {
+            background-color:#000;
+            color:#fff;
+        }
+        &.github::before {
+            content: "\f09b";
+            font-family:FontAwesome;
+        }
+        
+        .social-name {
+            display:none;
+        }
+        
+        
+    }
+}
+//------------------------------------------
+.fancyimg {
+    .shadow(0px 0px 11px 2px rgba(50, 50, 50, 0.1));
+    display:inline-block;
+    padding:10px;
+    margin:5px;
+}
+//------------------------------------------
+.offset-top {
+    margin-top:30px;
+}
+//------------------------------------------
+.promo {
+    .shadow(0px 0px 11px 2px rgba(50, 50, 50, 0.1));
+    position:relative;
+    background-color:@color-white;
+    border:1px solid @color-white;
+    padding:30px 45px;
+    font-family:@page-droid-sans-font-family;
+    font-size:18px;
+    
+    &.quote {
+        &:before {
+            content:"\f10d";
+            font-family:FontAwesome;
+            position:absolute;
+            top:5px;
+            left:10px;
+        }
+        &:after {
+            content:"\f10e";
+            font-family:FontAwesome;
+            position:absolute;
+            bottom:5px;
+            right:10px;
+        }
+    }
+}
+
+//------------------------------------------
+.section {
+    .shadow(0px 0px 11px 2px rgba(50, 50, 50, 0.1));
+    background-color:@color-white;
+    
+    .section-title {
+        position:relative;
+        background-color:@color-green;
+        color:@color-white;
+        padding:8px 30px;
+        
+        &:before {
+            content:"\f0c1";
+            position:absolute;
+            left:8px;
+            top:0px;
+            height:40px;
+            width:30px;
+            font-family:FontAwesome;
+            font-size:18px;
+            line-height:40px;
+        }
+        
+        h2 {
+            font-family:@page-droid-serif-font-family;
+            font-size:22px;
+            margin:0;
+        }
+    }
+    
+    .section-data {
+        padding:15px;
+        font-family:@page-droid-sans-font-family;
+        font-size:18px;
+        line-height:1.6;
+        color:@color-gray;
+        
+        strong, b {
+            color:lighten(@color-black,7%);
+        }
+    }
+}
+//------------------------------------------
+.text-small {
+    font-size:16px;
+}
+.container-fluid {
+    max-width:1170px;
+}
+/*-------------------------------------------*/
+.bs-callout {
+    padding:20px;
+    margin:20px 0;
+    border:1px solid #eee;
+    background-color:#fff;
+    border-left-width:5px;
+    border-radius:3px;
+}
+/*-------------------------------------------*/
+.bs-callout {
+    h4 {
+        margin-top:0;
+        margin-bottom:5px;
+    }
+    p:last-child {
+        margin-bottom:0;
+    }
+    code {
+        border-radius:3px;
+    }
+    &+.bs-callout {
+        margin-top:-5px;
+    }
+}
+.bs-callout-default {
+    border-color:#777;
+}
+.bs-callout-default h4 {
+    color:#777;
+}
+.bs-callout-primary {
+    border-color:#428bca;
+}
+.bs-callout-primary h4 {
+    color:#428bca;
+}
